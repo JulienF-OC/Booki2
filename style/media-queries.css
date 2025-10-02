@@ -1,0 +1,121 @@
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 0;
+  }
+
+  header .logo {
+    padding-top: 5px;
+    text-align: center;
+  }
+
+  header .logo img {
+    width: 33%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  nav {
+    display: flex;
+    width: 100%;
+  }
+
+  nav a {
+    flex: 1;
+    font-size: 16px;
+    text-align: center;
+    position: relative;
+    padding: 10px 0;
+  }
+
+  /* Effet hover : soulignement sous le lien */
+  nav a::before {
+    top: auto;
+    bottom: -5px; /* place la ligne en dessous */
+    left: 50%;
+    width: 130%;
+    height: 2px;
+    transform: translateX(-50%);
+    background-color: #f2f2f2;
+    transition: background-color 0.3s;
+  }
+
+  nav a:hover::before {
+    width: 130%;
+  }
+
+  #filter .title h1 {
+    padding: 0;
+    font-size: 18px;
+    margin: 0;
+    justify-content: flex-start;
+  }
+
+  .search-location {
+    flex-direction: row;
+    border-radius: 16px;
+    width: 100%;
+  }
+
+  .search-location .search-btn {
+    padding: 0;
+    width: 50px !important;
+    height: 50px;
+    border-radius: 15px;
+    text-indent: -9999px;
+    position: relative;
+  }
+
+  .search-location .search-btn::after {
+    content: "\f002";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-indent: 0;
+  }
+
+  .search-location input,
+  .search-location .search-btn {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .all-filters {
+    display: flex;
+    flex-direction: row; /* garder en ligne */
+    flex-wrap: wrap; /* autoriser le passage à la ligne si trop étroit */
+    gap: 10px;
+    align-items: center;
+  }
+
+  .filters-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: auto;
+  }
+
+  .filter-btn {
+    display: flex;
+    flex: 0 0 auto;
+    width: auto;
+    justify-content: center;
+  }
+
+  .hebergements-cards {
+    grid-template-columns: 1fr; /* 1 colonne sur petit écran */
+  }
+
+  .activity-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .activity-cards .card img {
+    height: 200px;
+  }
+}
