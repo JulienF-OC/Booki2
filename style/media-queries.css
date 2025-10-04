@@ -1,9 +1,23 @@
 @media screen and (max-width: 768px) {
+  html,
+  body,
+  .main-container,
+  header,
+  main,
+  footer {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
   header {
     flex-direction: column;
     align-items: center;
     gap: 15px;
     padding-bottom: 0;
+    padding-top: 30px;
   }
 
   header .logo {
@@ -20,13 +34,17 @@
   nav {
     display: flex;
     width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
   }
 
   nav a {
-    flex: 1;
-    font-size: 16px;
+    flex: 0 0 50%; /* chaque lien prend exactement 50% */
+    max-width: 50%;
     text-align: center;
     position: relative;
+    box-sizing: border-box; /* inclut padding dans la largeur */
     padding: 10px 0;
   }
 
@@ -35,7 +53,7 @@
     top: auto;
     bottom: -5px; /* place la ligne en dessous */
     left: 50%;
-    width: 130%;
+    width: 100%;
     height: 2px;
     transform: translateX(-50%);
     background-color: #f2f2f2;
@@ -43,31 +61,57 @@
   }
 
   nav a:hover::before {
-    width: 130%;
+    width: 100%;
   }
 
   #filter .title h1 {
     padding: 0;
+    padding-top: 20px;
     font-size: 18px;
     margin: 0;
     justify-content: flex-start;
   }
 
   .search-location {
-    flex-direction: row;
-    border-radius: 16px;
-    width: 100%;
+    display: flex;
+    width: 100%; /* prend toute la largeur */
+    margin: 0; /* supprime tout margin */
+    padding: 0 10px; /* petit padding interne */
+    box-sizing: border-box; /* inclut padding dans la largeur */
+    gap: 5px; /* espace entre icône, input et bouton */
   }
 
-  .search-location .search-btn {
-    padding: 0;
-    width: 50px !important;
+  /* Icône de localisation à gauche */
+  .search-location .icon-marker {
+    flex: 0 0 50px; /* largeur fixe */
     height: 50px;
-    border-radius: 15px;
-    text-indent: -9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f2f2f2;
+    border-radius: 16px 0 0 16px;
+  }
+
+  /* Champ input */
+  .search-location input {
+    flex: 1; /* prend tout l’espace restant */
+    height: 50px;
+    border: none;
+    padding: 0 10px;
+    border-radius: 0;
+    box-sizing: border-box;
+  }
+
+  /* Bouton recherche à droite */
+  .search-location .search-btn {
+    flex: 0 0 50px; /* largeur fixe */
+    height: 50px;
+    border-radius: 0 16px 16px 0;
+    text-indent: -9999px; /* cacher texte si nécessaire */
     position: relative;
   }
 
+  /* Icone du bouton */
   .search-location .search-btn::after {
     content: "\f002";
     font-family: "Font Awesome 5 Free";
@@ -78,12 +122,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-indent: 0;
-  }
-
-  .search-location input,
-  .search-location .search-btn {
-    width: 100%;
-    box-sizing: border-box;
   }
 
   .all-filters {
@@ -107,15 +145,31 @@
     justify-content: center;
   }
 
-  .hebergements-cards {
-    grid-template-columns: 1fr; /* 1 colonne sur petit écran */
+  .hebergements-and-populaires {
+    flex-direction: column; /* empile les sections */
   }
 
-  .activity-cards {
-    grid-template-columns: 1fr;
+  .hebergements {
+    order: 2; /* passe après */
+  }
+
+  .populaires {
+    order: 1; /* passe avant */
+  }
+
+  .hebergements-cards .card,
+  .populaires-cards .card,
+  .activity-cards .card {
+    flex: 1 1 100%; /* 1 card par ligne */
+    max-width: 100%;
   }
 
   .activity-cards .card img {
     height: 200px;
+  }
+
+  .footer-bloc {
+    flex-direction: column;
+    gap: 20px; /* au lieu de 150px */
   }
 }
