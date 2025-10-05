@@ -5,7 +5,7 @@
   header,
   main,
   footer {
-    margin: 0;
+    margin: 5px;
     padding: 0;
     width: 100%;
     box-sizing: border-box;
@@ -67,9 +67,15 @@
   #filter .title h1 {
     padding: 0;
     padding-top: 20px;
-    font-size: 18px;
-    margin: 0;
-    justify-content: flex-start;
+    font-size: 22px;
+    margin-left: 20px;
+    margin-right: 20px;
+    justify-content: center;
+  }
+
+  #filter .title span {
+    margin-left: 20px;
+    justify-content: center;
   }
 
   .search-location {
@@ -79,6 +85,7 @@
     padding: 0 10px; /* petit padding interne */
     box-sizing: border-box; /* inclut padding dans la largeur */
     gap: 5px; /* espace entre icône, input et bouton */
+    justify-content: center;
   }
 
   /* Icône de localisation à gauche */
@@ -106,7 +113,7 @@
   .search-location .search-btn {
     flex: 0 0 50px; /* largeur fixe */
     height: 50px;
-    border-radius: 0 16px 16px 0;
+    border-radius: 16px 16px 16px 16px;
     text-indent: -9999px; /* cacher texte si nécessaire */
     position: relative;
   }
@@ -126,23 +133,41 @@
 
   .all-filters {
     display: flex;
-    flex-direction: row; /* garder en ligne */
-    flex-wrap: wrap; /* autoriser le passage à la ligne si trop étroit */
+    flex-direction: column; /* empile le titre et les boutons */
+    align-items: flex-start; /* aligne à gauche */
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 5px;
     gap: 10px;
-    align-items: center;
+  }
+
+  .all-filters h3 {
+    margin-left: 15px;
   }
 
   .filters-group {
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 boutons par ligne */
+    gap: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
   }
 
   .filter-btn {
-    display: flex;
-    flex: 0 0 auto;
-    width: auto;
+    width: 100%;
     justify-content: center;
+    padding: 3px;
+    box-sizing: border-box;
+  }
+
+  .info-section {
+    margin-left: 15px;
+    font-weight: 600;
+    justify-content: center;
+  }
+
+  .info-section .info h3 {
   }
 
   .hebergements-and-populaires {
@@ -160,8 +185,8 @@
   .hebergements-cards .card,
   .populaires-cards .card,
   .activity-cards .card {
-    flex: 1 1 100%; /* 1 card par ligne */
-    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .activity-cards .card img {
