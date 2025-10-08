@@ -5,7 +5,9 @@
 :root {
   --main-color: #0065fc;
   --main-bg-color: #f2f2f2;
-  --filter-bg-color: #deebff;
+  --filter-bg-color-hover: #deebff;
+  --search-hover: #00507c;
+  --border: #d9d9d9;
 }
 
 .fa-solid {
@@ -41,13 +43,14 @@ header .logo {
 
 header .logo img {
   width: 33%;
+  padding-top: 15px;
 }
 
 nav {
   display: flex;
   flex-direction: row;
   padding-top: 10px;
-  gap: 30px;
+  gap: 70px;
 }
 
 nav a {
@@ -69,11 +72,11 @@ nav a::before {
 }
 
 nav a:hover {
-  color: #0065fc;
+  color: var(--main-color);
 }
 
 nav a:hover::before {
-  background-color: #0065fc;
+  background-color: var(--main-color);
 }
 
 /*********Filtres**********/
@@ -152,7 +155,7 @@ nav a:hover::before {
 }
 
 .search-location button:hover {
-  background-color: #00507c;
+  background-color: var(--search-hover);
 }
 
 .search-location .search-btn i {
@@ -177,7 +180,7 @@ nav a:hover::before {
 .filter-btn {
   display: flex;
   align-items: center;
-  box-shadow: inset 0 0 0 2px #d9d9d9;
+  box-shadow: inset 0 0 0 2px var(--border);
   padding: 1px 25px;
   border-radius: 50px;
   cursor: pointer;
@@ -188,7 +191,7 @@ nav a:hover::before {
 }
 
 .filter-btn:hover {
-  background-color: var(--filter-bg-color);
+  background-color: var(--filter-bg-color-hover);
 }
 
 .filter-btn .icon-filter {
@@ -232,7 +235,7 @@ nav a:hover::before {
   border-radius: 50%;
   height: 25px;
   width: 25px;
-  color: #0065fc;
+  color: var(--main-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -240,7 +243,7 @@ nav a:hover::before {
 }
 
 .info-section i {
-  font-size: 81%;
+  font-size: 16px;
 }
 
 /****** Hebergements And Populaires ***********/
