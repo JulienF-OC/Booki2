@@ -171,7 +171,6 @@
 
   .info-section .info h3 {
     display: flex;
-    flex-direction: wrap;
   }
 
   .hebergements-and-populaires {
