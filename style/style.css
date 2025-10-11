@@ -14,6 +14,10 @@
   color: var(--main-color);
 }
 
+.fa-xs {
+  font-size: 13px;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -334,6 +338,7 @@ a {
   flex-direction: column;
   padding: 0px 15px 10px 15px;
   flex: 1;
+  gap: 5px;
 }
 
 .hebergements-cards .card-txt {
@@ -343,7 +348,7 @@ a {
 .hebergements-cards .card-title {
   font-size: 16px;
   font-weight: 700;
-  margin: 8px 0 4px 0;
+  margin: 8px 0 8px 0;
 }
 
 .hebergements-cards .card-subtitle {
@@ -352,7 +357,6 @@ a {
   margin: 0;
 }
 
-/* Rating */
 .hebergements-cards .card-rating {
   display: flex;
   gap: 2px;
