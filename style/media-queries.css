@@ -327,6 +327,14 @@
     flex-direction: row;
   }
 
+  .filter-btn span {
+    font-size: 16px;
+  }
+
+  .filter-btn .icon-filter {
+    margin-left: -20px;
+  }
+
   .hebergements-and-populaires {
     flex-direction: column;
     border-radius: 0;
@@ -336,6 +344,16 @@
   .hebergements {
     order: 1;
     width: 100%;
+  }
+
+  .hebergements-cards .card-txt {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .hebergements-cards .card-rating {
+    margin-top: 5px;
   }
 
   .populaires {
