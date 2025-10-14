@@ -70,7 +70,7 @@ nav a::before {
   top: -18px;
   left: 0;
   width: 100%;
-  height: 3px;
+  height: 2px;
   background-color: transparent;
   transition: background-color 0.3s;
 }
@@ -207,7 +207,19 @@ nav a:hover::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: -25px;
+  margin-left: -15px;
+}
+
+.filter-btn .icon-filter-child {
+  color: var(--main-color);
+  height: 50px;
+  width: 50px;
+  font-size: 22px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -15px;
 }
 
 .filter-btn span {
@@ -277,7 +289,7 @@ a {
 
 .card {
   background-color: white;
-  border-radius: 20px;
+  border-radius: 15px;
   padding: 5px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
@@ -319,7 +331,7 @@ a {
   display: flex;
   flex-direction: column;
   background: #fff;
-  border-radius: 20px;
+  border-radius: 15px;
   overflow: hidden;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
@@ -440,7 +452,7 @@ a {
   display: flex;
   flex-direction: column;
   background: none;
-  border-radius: 20px;
+  border-radius: 15px;
   overflow: hidden;
   max-width: 285px;
 }
