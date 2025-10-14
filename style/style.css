@@ -272,7 +272,7 @@ nav a:hover::before {
 
 .hebergements-and-populaires section {
   background-color: var(--main-bg-color);
-  border-radius: 20px;
+  border-radius: 15px;
   padding: 30px;
   box-sizing: border-box;
 }
