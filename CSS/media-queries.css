@@ -370,6 +370,7 @@
     flex-direction: column;
     border-radius: 0;
     gap: 50px;
+    width: 925px;
   }
 
   .hebergements {
@@ -396,6 +397,11 @@
     display: flex;
     flex-direction: row;
     gap: 15px;
+  }
+
+  .populaires-cards .card {
+    width: 275px;
+    box-sizing: border-box;
   }
 
   /**** ACTIVITES ****/
